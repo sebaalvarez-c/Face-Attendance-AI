@@ -1,4 +1,4 @@
-# Face Attendance AI 🤖
+# Face Attendance AI 
 
 Sistema inteligente de control de asistencia desarrollado con Inteligencia Artificial, utilizando reconocimiento facial, análisis de emociones, reconocimiento de voz y validación mediante ubicación GPS.
 
@@ -120,15 +120,15 @@ Cuenta con un panel donde se puede visualizar:
           API REST FastAPI
                 |
              | | | |
-Reconocimiento Emociones Voz GPS
-Facial IA IA Validación
+    Reconocimiento Emociones Voz GPS
+       Facial IA IA Validación
                 |
                 |
           PostgreSQL
                 |
                 |
-    Usuarios y registros asistencia
-
+      Usuarios y registros asistencia
+                
 ---
 
 # Tecnologías utilizadas
