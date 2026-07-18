@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Face Attendance AI</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-gray-950 text-white min-h-screen">
+
+
+  <nav class="flex justify-between items-center px-8 py-5 border-b border-white/10">
+
+    <h1 class="text-xl font-bold">
+      Face Attendance AI
+    </h1>
+
+
+    <div class="flex gap-4 text-sm text-gray-300">
+
+      <a href="index.html" class="text-blue-400">
+        Asistencia
+      </a>
+
+
+      <a href="register.html" class="hover:text-white">
+        Registro
+      </a>
+
+
+      <a href="dashboard.html" class="hover:text-white">
+        Dashboard
+      </a>
+
+    </div>
+
+  </nav>
+
+
+
+
+
+  <main class="flex items-center justify-center p-8">
+
+
+    <section
+      class="w-full max-w-3xl rounded-3xl bg-white/10 border border-white/10 shadow-2xl p-8 backdrop-blur">
+
+
+      <div class="text-center mb-6">
+
+
+        <h2 class="text-4xl font-bold">
+          Registro de Asistencia
+        </h2>
+
+
+        <p class="text-gray-300 mt-2">
+          Reconocimiento facial + GPS + análisis de emoción
+        </p>
+
+
+      </div>
+
+
+
+
+
+
+      <video
+        id="video"
+        autoplay
+        playsinline
+        class="rounded-2xl border border-blue-500/60 w-full shadow-lg bg-black">
+      </video>
+
+
+
+      <canvas id="canvas" class="hidden"></canvas>
+
+
+
+
+
+
+
+      <div class="mt-5 flex justify-center">
+
+
+        <button
+          id="btnReconocer"
+          class="bg-blue-600 px-10 py-3 rounded-xl hover:bg-blue-700 transition font-semibold">
+
+
+          Marcar asistencia
+
+
+        </button>
+
+
+      </div>
+
+
+
+
+
+
+
+      <p
+        id="mensaje"
+        class="mt-5 text-lg text-gray-300 text-center">
+
+
+        Cámara activa. Coloque su rostro frente a la cámara.
+
+
+      </p>
+
+
+
+
+    </section>
+
+
+  </main>
+
+
+
+
+
+
+  <script src="./assets/js/api.js"></script>
+
+  <script src="./assets/js/camera.js"></script>
+
+
+
+</body>
+
+</html>

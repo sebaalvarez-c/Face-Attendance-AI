@@ -1,0 +1,22 @@
+# Entorno virtual Python
+backend/venv/
+venv/
+
+# Archivos temporales Python
+__pycache__/
+*.pyc
+
+# Configuraciones privadas
+.env
+
+# Modelos personales de IA
+models_ai/encodings.pkl
+
+# Editor
+.vscode/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp

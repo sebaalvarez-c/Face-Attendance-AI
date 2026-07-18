@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Face Attendance AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+  <nav class="flex justify-between items-center px-8 py-5 border-b border-white/10">
+    <h1 class="text-xl font-bold">Face Attendance AI</h1>
+    <div class="flex gap-4 text-sm text-gray-300">
+      <a href="index.html" class="hover:text-white">Asistencia</a>
+      <a href="register.html" class="hover:text-white">Registro</a>
+      <a href="dashboard.html" class="text-blue-400">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="p-8 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold">Dashboard de Asistencia</h2>
+    <p class="text-gray-300 mt-1">Resumen conectado al backend y PostgreSQL.</p>
+
+    <section class="grid md:grid-cols-3 gap-4 mt-8">
+      <article class="bg-white/10 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400">Presentes hoy</p>
+        <h3 id="presentToday" class="text-4xl font-bold mt-2">0</h3>
+      </article>
+      <article class="bg-white/10 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400">Usuarios</p>
+        <h3 id="totalUsers" class="text-4xl font-bold mt-2">0</h3>
+      </article>
+      <article class="bg-white/10 border border-white/10 rounded-2xl p-5">
+        <p class="text-gray-400">Registros totales</p>
+        <h3 id="totalRecords" class="text-4xl font-bold mt-2">0</h3>
+      </article>
+    </section>
+
+    <section class="mt-8 bg-white/10 border border-white/10 rounded-2xl p-5 overflow-x-auto">
+      <h3 class="text-xl font-bold mb-4">Historial</h3>
+      <table class="w-full text-left text-sm">
+        <thead class="text-gray-400">
+          <tr class="border-b border-white/10">
+            <th class="py-3">Usuario</th>
+            <th class="py-3">Código</th>
+            <th class="py-3">Rol</th>
+            <th class="py-3">Fecha</th>
+            <th class="py-3">Estado</th>
+            <th class="py-3">Distancia</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>

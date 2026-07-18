@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic
+opencv-python
+numpy
+
+deepface
+tensorflow
+python-multipart

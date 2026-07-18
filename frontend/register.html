@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar usuario - Face Attendance AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+  <nav class="flex justify-between items-center px-8 py-5 border-b border-white/10">
+    <h1 class="text-xl font-bold">Face Attendance AI</h1>
+    <div class="flex gap-4 text-sm text-gray-300">
+      <a href="index.html" class="hover:text-white">Asistencia</a>
+      <a href="register.html" class="text-blue-400">Registro</a>
+      <a href="dashboard.html" class="hover:text-white">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="p-8 flex justify-center">
+    <section class="w-full max-w-5xl grid lg:grid-cols-2 gap-8 rounded-3xl bg-white/10 border border-white/10 p-8 backdrop-blur shadow-2xl">
+      <div>
+        <h2 class="text-3xl font-bold mb-2">Registrar usuario</h2>
+        <p class="text-gray-300 mb-6">Captura el rostro y guarda el usuario en PostgreSQL.</p>
+
+        <form id="registerForm" class="space-y-4">
+          <input id="name" required class="w-full rounded-xl bg-gray-900 border border-white/10 px-4 py-3 outline-none focus:border-blue-500" placeholder="Nombre completo">
+          <input id="code" required class="w-full rounded-xl bg-gray-900 border border-white/10 px-4 py-3 outline-none focus:border-blue-500" placeholder="Código / matrícula">
+          <select id="role" class="w-full rounded-xl bg-gray-900 border border-white/10 px-4 py-3 outline-none focus:border-blue-500">
+            <option value="student">Estudiante</option>
+            <option value="teacher">Docente</option>
+            <option value="admin">Administrador</option>
+          </select>
+
+          <button class="w-full bg-blue-600 px-8 py-3 rounded-xl hover:bg-blue-700 transition font-semibold">
+            Registrar con rostro
+          </button>
+        </form>
+
+        <p id="registerMessage" class="mt-4 text-gray-300"></p>
+      </div>
+
+      <div>
+        <video id="registerVideo" autoplay playsinline class="rounded-2xl border border-blue-500/60 w-full shadow-lg bg-black"></video>
+        <canvas id="registerCanvas" class="hidden"></canvas>
+        <p class="text-sm text-gray-400 mt-3">Reconocimiento facial</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>
